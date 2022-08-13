@@ -1,4 +1,4 @@
-﻿/*TIP CALCULATOR
+/*TIP CALCULATOR
 Directions:
 Build a tip calculator.
 
@@ -25,36 +25,34 @@ Steps:
 */
 
 
-
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
-    <meta charset="utf-8" />
-    <title>Tip Calculator</title>
-    <link rel="stylesheet" type="text/css" src="styles.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Tip calculator</title>
 </head>
-
 <body>
-    <form id="form">
-        <p><strong>THANK YOU FOR DINING WITH US!</strong></p>
-        <p>We hope that you've enjoyed your meal, and the service!</p><br>
-
-        <label>Cost of the meal:</label><br><br>
-        <input type="number" id="mealCost" name="mealCost"><br><br><br>
-        <label>Desired gratuity:</label><br><br>
-
-        <button id="tipTwenty">20%</button>
-        <button id="tipTwentyFive">25%</button>
-        <button id="tipThirty">30%</button>
-        <button id="tipCustom">Custom</button>
-
-    </form>
-    <p id="totalCost">Total</p><br>
-    <p>Thank you!</p>
-    <p id="thanks"><strong>PLEASE COME AGAIN!</strong></p><br>
-
-</body>
+  <h1>THANK YOU FOR VISITING!</h1>
+  <input type="number" id="mealCost" value=""> Meal Amount (to the nearest dollar)</input>
+  <br>
+  <input type="number" id="tip" value=""> Desired % Gratuity</input>
+ <br><br>
+   <button onClick="getMealValue()">Submit</button>
+<br>
+<p>TOTAL</p> 
+<br>   
+<p id="totalCost"></p>
+<br>
+<h3>THANK YOU, PLEASE COME AGAIN!</h3>
 <script>
-
+  function getMealValue(){
+    
+      let x= document.getElementById("mealCost").value;
+      let y = document.getElementById("tip").value;
+      let z= document.getElementById("totalCost");
+      z.innerHTML= x+(y/x);
+    }
 </script>
+</body>
 </html>
