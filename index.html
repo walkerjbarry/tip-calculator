@@ -33,6 +33,7 @@ Steps:
   <title>Tip calculator</title>
 </head>
 <body>
+<<<<<<< HEAD
   <h1>THANK YOU FOR VISITING!</h1>
   <input type="number" id="mealCost" value=""> Meal Amount (to the nearest dollar)</input>
   <br>
@@ -53,6 +54,36 @@ Steps:
       let z= document.getElementById("totalCost");
       z.innerHTML= x+(y/x);
     }
+=======
+    <form id="form">
+        <p><strong>THANK YOU FOR DINING WITH US!</strong></p>
+        <p>We hope that you've enjoyed your meal, and the service!</p><br>
+
+        <label>Cost of the meal (rounded to the nearest $):</label><br><br>
+        <input type="number" id="mealCost" name="mealCost"><br><br><br>
+        <label>Desired gratuity (Thank you!):</label><br><br>
+
+        <button id="tipTwenty">20%</button>
+        <button id="tipTwentyFive">25%</button>
+        <button id="tipThirty">30%</button>
+        <input id="tipCustom" type="number"">Custom</input>
+
+    </form>
+    <p id="totalCost">Total</p><br>
+    <p>Thank you!</p>
+    <p id="thanks"><strong>PLEASE COME AGAIN!</strong></p><br>
+
+</body>
+<script>
+
+    mealCost = getElementByID.mealCost.innerHTML.value;
+    tipTwenty.onClick = (mealCost * 1.20);
+    tipTwentyFive.onClick = (mealCost * 1.25);
+    tipThirty.onClick = (mealCost * 1.30); \
+    tipCustom 
+    let totalCost = 
+    
+>>>>>>> f0d409316470dc7b5d6567fa37a4cc5e60aaf115
 </script>
 </body>
 </html>
