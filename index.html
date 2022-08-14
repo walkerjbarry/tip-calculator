@@ -1,4 +1,4 @@
-/*TIP CALCULATOR
+<!--TIP CALCULATOR
 Directions:
 Build a tip calculator.
 
@@ -11,79 +11,39 @@ Requirements:
 -The form should also let the user choose the percentage tip they want to give.
 -When they submit the form, show them the total with tip added.
 -Display the total tip amount as well so they know how much they're tipping.
-Steps:
+Steps:! 
 
--Form  (maybe using ".onSubmit"?)
-
-    needs an input for:
-        -cost of the meal (user will input this)
-        - desired tip amount (percentage of the cost of the meal)
-            could be buttons w percentages - maybe 15%, 20%, 25%, none
-    onSubmit, needs to indicate (in HTML):
-        -cash amount of tip
-        -total cost of the meal
-*/
-
+STEPS / METHOD
+-----------------------
+     As always, there are many ways to do this. 
+     Here, I have chosen a way that is very simple, 
+     if not completely optimal, in terms of UX.  
+     The HTML structure I have chosen employs input fields for the meal cost as well as the desired gratuity. 
+     -->
 
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Tip calculator</title>
+  <script type="text/javascript" src="script.js"></script>
+  <link rel="stylesheet" type="text/css" href="styles.css"/>
+  <title>Tip Calculator</title>
 </head>
 <body>
-<<<<<<< HEAD
-  <h1>THANK YOU FOR VISITING!</h1>
-  <input type="number" id="mealCost" value=""> Meal Amount (to the nearest dollar)</input>
-  <br>
-  <input type="number" id="tip" value=""> Desired % Gratuity</input>
- <br><br>
-   <button onClick="getMealValue()">Submit</button>
-<br>
-<p>TOTAL</p> 
-<br>   
-<p id="totalCost"></p>
-<br>
-<h3>THANK YOU, PLEASE COME AGAIN!</h3>
-<script>
-  function getMealValue(){
-    
-      let x= document.getElementById("mealCost").value;
-      let y = document.getElementById("tip").value;
-      let z= document.getElementById("totalCost");
-      z.innerHTML= x+(y/x);
-    }
-=======
-    <form id="form">
-        <p><strong>THANK YOU FOR DINING WITH US!</strong></p>
-        <p>We hope that you've enjoyed your meal, and the service!</p><br>
-
-        <label>Cost of the meal (rounded to the nearest $):</label><br><br>
-        <input type="number" id="mealCost" name="mealCost"><br><br><br>
-        <label>Desired gratuity (Thank you!):</label><br><br>
-
-        <button id="tipTwenty">20%</button>
-        <button id="tipTwentyFive">25%</button>
-        <button id="tipThirty">30%</button>
-        <input id="tipCustom" type="number"">Custom</input>
-
-    </form>
-    <p id="totalCost">Total</p><br>
-    <p>Thank you!</p>
-    <p id="thanks"><strong>PLEASE COME AGAIN!</strong></p><br>
-
-</body>
-<script>
-
-    mealCost = getElementByID.mealCost.innerHTML.value;
-    tipTwenty.onClick = (mealCost * 1.20);
-    tipTwentyFive.onClick = (mealCost * 1.25);
-    tipThirty.onClick = (mealCost * 1.30); \
-    tipCustom 
-    let totalCost = 
-    
->>>>>>> f0d409316470dc7b5d6567fa37a4cc5e60aaf115
-</script>
-</body>
+      <h2>THANK YOU FOR VISITING!</h2>
+      <input type="number" id="mealCost" min=0 max=100 value=""> Meal Amount (to the nearest dollar)</input>
+      <br>
+      <input type="number" id="tipAmt" min=0 max=100 value=""> Desired % Gratuity</input>
+     <br><br>
+       <button onClick=getMealValue()>Submit</button>
+    <br>
+    <p>Total Cost</p> 
+  
+    <p id="totalCost"></p>
+    <br>
+    <h3>THANK YOU, PLEASE COME AGAIN!</h3>
+   <script>
+ </script>
+  </body>
 </html>
